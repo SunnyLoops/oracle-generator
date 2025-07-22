@@ -1,0 +1,48 @@
+## Oracle Images Organization
+
+The `oracle-images/` folder contains all image assets used in this project. Currently, images are organized in the following folder:
+
+- **cards/**  
+  Contains all oracle card images.
+
+### Notes
+
+- Each image file is approximately 150 KB.
+- Total number of images is 44.
+- This structure helps maintain clarity and simplifies asset management.
+- System files like `.DS_Store` are excluded via `.gitignore` to keep the repository clean.
+
+---
+
+As the project grows, this structure may be expanded with additional folders.
+## Oracle Generator Architecture
+
+### Image-Description Matching
+
+- The project contains **44 oracle card images** stored in the `oracle-images/cards/` folder.
+- Each image has a corresponding **description** stored in the `descriptions/` folder.
+- Descriptions and images follow a consistent naming convention (e.g., `card01.png` matches `descriptions01.md`).
+- During generation, a **random image-description pair** is selected to create a unique oracle card output.
+- This ensures coherent pairing and easy scalability when new cards are added.
+
+### Future Considerations
+
+- Implement validation to ensure every image has a matching description.
+- Explore support for additional metadata (e.g., keywords or categories).
+### Image-Description Mapping via JSON
+
+- A JSON file named `image-description-map.json` will reside in the `src/` folder.
+- This file maps each oracle image filename to its corresponding description filename.
+- Example structure:
+
+  ```json
+  {
+    "Abundance_oracle.png": "Abundance_description.md",
+    "Growth_oracle.png": "Growth_description.md",
+    ...
+  }### Random Oracle Generation
+
+- The system selects a random image filename from the `oracle-images/cards/` folder.
+- It then uses the `image-description-map.json` to find the matching description file.
+- This pairing is displayed or returned as the generated oracle card.
+Images and descriptions are randomly selected as pairs, ensuring each description matches its corresponding image.
