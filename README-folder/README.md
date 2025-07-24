@@ -1,6 +1,6 @@
 # Oracle Generator
 
-Welcome to the Oracle Generator project!
+Welcome to the *Oracle Generator Project*!
 
 ## Descriptions
 
